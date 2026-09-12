@@ -16,8 +16,8 @@
     "description": "A React framework offering server-side rendering, static site generation, and full-stack capabilities.",
     "icon": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
     "rating": 4.8,
-    "difficulty": "Intermediate",
-    "badge": "Fast"
+    "difficulty": "Intermediate"
+   
   },
   {
     "id": "typescript",

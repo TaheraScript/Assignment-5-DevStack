@@ -1,12 +1,24 @@
 import type { ITechType } from "../Type/ITechType";
 import TechDataCard from "./TechDataCard";
 
-const AvailableTechData = ({ techDatas }:{techDatas : ITechType[]}) => {
+interface IAvailableTechPropType {
+  techDatas: ITechType[];
+  selectedTechs: ITechType[];
+  onAddTech: (tech: ITechType) => void;
+}
+
+const AvailableTechData = ({ techDatas, selectedTechs, onAddTech }: IAvailableTechPropType) => {
   return (
-    <div className="grid grid-cols-3 gap-4 ">
-      {techDatas.map((techData :ITechType,index :number) => {
+    <div className="grid grid-cols-3 gap-4 flex-1">
+      {techDatas.map((techData: ITechType) => {
+        const isAdded = selectedTechs.some((t) => t.id === techData.id);
         return (
-          <TechDataCard key={index} techData ={techData}></TechDataCard>
+          <TechDataCard
+            key={techData.id}
+            techData={techData}
+            isAdded={isAdded}
+            onAddTech={onAddTech}
+          />
         );
       })}
     </div>
