@@ -4,6 +4,7 @@ import Tech from './Component/Technologies/Tech'
 import './App.css'
 import { Suspense } from 'react'
 import type { ITechType } from './Component/Type/ITechType'
+import Footer from './Component/Footer'
 
 const techPromise = async (): Promise<ITechType[]> => {
   const res = await fetch('/public/data.json')
@@ -19,6 +20,7 @@ function App() {
       <Suspense fallback={<p>Loading...</p>}>
         <Tech techPromise={techPromise()}></Tech>
       </Suspense>
+      <Footer></Footer>
     </>
   )
 }
