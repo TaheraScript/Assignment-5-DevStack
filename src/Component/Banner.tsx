@@ -3,7 +3,7 @@ const Banner = () => {
   return (
     <div className="flex justify-between container mx-auto items-center ">
       <div>
-        <h1 className="font-extrabold text-[60px] mb-4 leading-[1.1]">
+        <h1 className="font-extrabold text-[60px] mb-4 leading-[1.1] text-style">
              Build Your Ideal<br /><span className="bg-linear-to-r from-orange-500 via-pink-600 to-purple-600 bg-clip-text text-transparent">
   Development Stack
 </span>
@@ -18,7 +18,7 @@ const Banner = () => {
           <button className="bg-linear-to-r from-[#F97316] to-[#EC4899] text-white font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition">
             Explore Technologies
           </button>
-          <button className="btn btn-lg px-14 font-normal">Learn More</button>
+          <button className="btn btn-lg btn-outline px-14 font-normal">Learn More</button>
         </div>
       </div>
       <img src={BannerImage} alt="An image of Tech Stack Illustration" />
