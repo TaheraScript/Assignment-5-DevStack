@@ -1,5 +1,5 @@
 import Navbar from './Component/Navbar'
-
+import Banner from './Component/Banner'
 
 function App() {
  
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-   
+      <Banner></Banner>
 
     </>
   )
