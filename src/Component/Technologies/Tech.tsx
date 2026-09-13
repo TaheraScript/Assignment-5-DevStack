@@ -2,6 +2,7 @@ import { use, useState } from "react";
 import type { ITechType } from "../Type/ITechType";
 import AvailableTechData from "./AvailableTechData";
 import YourStack from "./YourStack";
+import { toast } from "react-toastify"; 
 
 interface ITechPropType {
   techPromise: Promise<ITechType[]>;
@@ -14,18 +15,22 @@ const Tech = ({ techPromise }: ITechPropType) => {
   const handleAddTech = (tech: ITechType) => {
     const alreadyAdded = selectedTechs.some((t) => t.id === tech.id);
     if (alreadyAdded) {
-      alert("This technology is already in your stack!");
+      toast.warning(`${tech.name} is already in your stack!`);
       return;
     }
     setSelectedTechs((prev) => [...prev, tech]);
+    toast.success(`${tech.name} added to your stack!`); 
   };
 
   const handleRemoveTech = (id: string) => {
+    const tech = selectedTechs.find((t) => t.id === id);
     setSelectedTechs((prev) => prev.filter((t) => t.id !== id));
+    if (tech) toast.info(`${tech.name} removed from your stack.`);
   };
 
   const handleRemoveAll = () => {
     setSelectedTechs([]);
+    toast.info("All technologies removed from your stack.");
   };
 
   return (

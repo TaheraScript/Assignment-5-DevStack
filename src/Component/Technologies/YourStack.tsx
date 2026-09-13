@@ -27,13 +27,13 @@ const YourStack = ({
         </div>
       ) : (
         <div>
-          <div className="flex flex-col gap-1.5">
+          <div className="flex flex-col gap-2">
             {selectedTechs.map((tech) => (
               <div
                 key={tech.id}
-                className="flex items-center justify-between p-2 bg-base-200 rounded-lg  border-b-gray-500"
+                className="flex items-center justify-between p-2 bg-base-100 rounded-lg border border-gray-200 "
               >
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 ">
                   <img src={tech.icon} alt={tech.name} className="h-6 w-6" />
                   <div>
                     <p className="text-sm font-semibold">{tech.name}</p>
@@ -41,7 +41,7 @@ const YourStack = ({
                   </div>
                 </div>
                 <button onClick={() => onRemove(tech.id)}>
-                  <AiOutlineClose className="text-gray-500 hover:text-red-500 cursor-pointer transition-colors" />
+                  <AiOutlineClose className="text-gray-500 hover:text-orange-500 cursor-pointer transition-colors" />
                 </button>
               </div>
             ))}

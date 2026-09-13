@@ -3,12 +3,13 @@ import FooterImage from '../assets/logo-text.png'
 const Footer = () => {
     return (
         <div className='mb-9'>
-        <div className='flex container mx-auto justify-between items-center space-y-6 mt-10 py-6 px-20'>
+            <div className='divider'/>
+        <div className='flex container mx-auto justify-between items-center space-y-6 mt-10 py-6 '>
             <div className='space-y-3'>
                 <img src={FooterImage} alt="Logo of DevStack" />
                 <p className='text'>Curated tools, technologies, and resources for developers building<br />modern software.</p>
                 <ul className='font-semibold text-[12px] text-[#475569] flex gap-4 items-center'>
-                    <li><a href="https://github.com/TaheraScript">GitHub</a></li>
+                    <li><a href="https://github.com/TaheraScript?tab=repositories">GitHub</a></li>
                     <li><a href="https://x.com/">Twitter</a></li>
                     <li><a href="https://bd.linkedin.com/">LinkedIn</a></li>
                 </ul>
@@ -37,7 +38,7 @@ const Footer = () => {
                 </ul>
             </div>
         </div>
-        <div className='divider '/>
+        <div className='divider px-18 '/>
         <div className='flex justify-between container mx-auto'>
             <p className=' text-[12px] text-[#94A3B8] mb-2 '>© 2026 Dev Stack. All rights reserved.</p>
             <ul className=' text-[12px] text-[#94A3B8] flex gap-5 mb-2'>
