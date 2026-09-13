@@ -26,7 +26,7 @@ const Footer = () => {
                 <h2 className='footer-text-style'>COMPANY</h2>
                 <ul className='text space-y-2'>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Contaxt</a></li>
+                    <li><a href="#">Contact</a></li>
                     <li><a href="#">Careers</a></li>
                 </ul>
             </div>

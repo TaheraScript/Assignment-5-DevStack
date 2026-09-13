@@ -6,7 +6,7 @@ const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false); 
    return (
     <div className="sticky top-0 z-50 bg-white shadow-sm flex ">
-     <div className="flex justify-between items-center w-full max-w-7xl mx-auto my-4 px-4">
+     <div className="grid grid-cols-3 md:flex md:justify-between items-center w-full max-w-7xl mx-auto my-4 px-4">
         <button
           className="md:hidden text-2xl" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
@@ -21,9 +21,9 @@ const Navbar = () => {
           <li><a href="#">Contact</a></li>
         </ul>
 
-        <div className="flex gap-2 md:gap-6 items-center"> 
-          <button className="btn btn-link no-underline text-gray-700 font-medium hidden sm:inline-flex">Sign In</button>
-          <button className="btn btn-active btn-secondary rounded-4xl">Sign Up</button>
+        <div className="flex gap-2 md:gap-6 items-center justify-self-end md:justify-self-auto"> 
+          <button className="btn btn-link btn-sm md:btn-md no-underline text-gray-700 font-medium">Sign In</button>
+          <button className="btn btn-sm md:btn-md btn-active btn-secondary rounded-4xl">Sign Up</button>
         </div>
       </div>
 
