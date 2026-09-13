@@ -9,16 +9,11 @@ interface IAvailableTechPropType {
 
 const AvailableTechData = ({ techDatas, selectedTechs, onAddTech }: IAvailableTechPropType) => {
   return (
-    <div className="grid grid-cols-3 gap-4 flex-1 mb-15">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 flex-1 min-w-0 mb-15">
       {techDatas.map((techData: ITechType) => {
         const isAdded = selectedTechs.some((t) => t.id === techData.id);
         return (
-          <TechDataCard
-            key={techData.id}
-            techData={techData}
-            isAdded={isAdded}
-            onAddTech={onAddTech}
-          />
+          <TechDataCard key={techData.id} techData={techData} isAdded={isAdded} onAddTech={onAddTech}/>
         );
       })}
     </div>

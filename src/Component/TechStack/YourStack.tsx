@@ -7,18 +7,12 @@ interface IYourStackPropType {
   onRemoveAll: () => void;
 }
 
-const YourStack = ({
-  selectedTechs,
-  onRemove,
-  onRemoveAll,
-}: IYourStackPropType) => {
+const YourStack = ({selectedTechs,onRemove,onRemoveAll}: IYourStackPropType) => {
   return (
-    <aside className="w-72 shrink-0 bg-base-100 rounded-xl p-6 h-fit shadow-sm border border-gray-200 hover:shadow-lg transition-shadow cursor-pointer">
+    <aside className="w-full lg:w-72 shrink-0 bg-base-100 rounded-xl p-6 h-fit shadow-sm border border-gray-200 hover:shadow-lg transition-shadow cursor-pointer">
       <h2 className="font-bold text-lg mb-1">Your Stack</h2>
       <p className="text-sm text-gray-400 mb-4">
-        {selectedTechs.length === 0
-          ? "No technologies selected yet."
-          : `${selectedTechs.length} Technology Selected`}
+        {selectedTechs.length === 0? "No technologies selected yet." : `${selectedTechs.length} Technology Selected`}
       </p>
 
       {selectedTechs.length === 0 ? (
@@ -29,10 +23,7 @@ const YourStack = ({
         <div>
           <div className="flex flex-col gap-2">
             {selectedTechs.map((tech) => (
-              <div
-                key={tech.id}
-                className="flex items-center justify-between p-2 bg-base-100 rounded-lg border border-gray-200 "
-              >
+              <div key={tech.id} className="flex items-center justify-between p-2 bg-base-100 rounded-lg border border-gray-200 ">
                 <div className="flex items-center gap-2 ">
                   <img src={tech.icon} alt={tech.name} className="h-6 w-6" />
                   <div>
@@ -47,12 +38,7 @@ const YourStack = ({
             ))}
           </div>
 
-          <button
-            onClick={onRemoveAll}
-            className="btn btn-outline btn-error w-full mt-4 rounded-xl"
-          >
-            Remove All
-          </button>
+          <button onClick={onRemoveAll} className="btn btn-outline btn-error w-full mt-4 rounded-xl"> Remove All</button>
         </div>
       )}
     </aside>

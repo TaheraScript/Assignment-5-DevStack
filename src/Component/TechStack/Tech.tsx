@@ -47,19 +47,10 @@ const Tech = ({ techPromise }: ITechPropType) => {
         </p>
       </div>
 
-      <div className="flex gap-6 container mx-auto mt-6 items-start">
-         <AvailableTechData
-          techDatas={techDatas}
-          selectedTechs={selectedTechs}
-          onAddTech={handleAddTech}
-        />
-        <YourStack
-          selectedTechs={selectedTechs}
-          onRemove={handleRemoveTech}
-          onRemoveAll={handleRemoveAll}
-        />
-       
-      </div>
+      <div className="flex flex-col lg:flex-row gap-6 container mx-auto mt-6 items-start">
+         <AvailableTechData techDatas={techDatas} selectedTechs={selectedTechs} onAddTech={handleAddTech}/>
+        <YourStack selectedTechs={selectedTechs} onRemove={handleRemoveTech} onRemoveAll={handleRemoveAll}/>
+       </div>
     </div>
   );
 };

@@ -144,7 +144,7 @@
     "name": "Visual Studio Code",
     "category": "Tools",
     "description": "A free, lightweight, and highly extensible source-code editor with built-in debugging support.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Visual-Studio-Code.svg",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Essential"

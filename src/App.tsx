@@ -1,15 +1,15 @@
-import Navbar from './Component/Navbar'
-import Banner from './Component/Banner'
-import Tech from './Component/Technologies/Tech'
-import './App.css'
+import Navbar from './Component/Layout/Navbar'
+import Banner from './Component/Banner/Banner'
+import Tech from './Component/TechStack/Tech'
+import Footer from './Component/Layout/Footer'
 import { Suspense } from 'react'
 import type { ITechType } from './Component/Type/ITechType'
-import Footer from './Component/Footer'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css' 
+import './App.css'
 
 const techPromise = async (): Promise<ITechType[]> => {
-  const res = await fetch('/public/data.json')
+  const res = await fetch('/data.json')
   const data = await res.json()
   return data;
 }
